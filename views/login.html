@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Login Page</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/login.css">
+
+   <!-- --------For all icons---------- -->
+    <script src="https://kit.fontawesome.com/8ce0bceac7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <div id="message">
+        <div class="heading">
+            <h3>Login to</span></h3>
+            <h2>Social Media Dashboard</h2>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="form login">
+                    <h2>Login</h2>
+                    <form action="/login" method="post">
+                        <div class="input">
+                            <span class="icon"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" name="name" class="name" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input">
+                            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" name="password" class="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="registerlogin">
+                            <p>Don't have an account ?&nbsp;<a href="/register">
+                                Register</a></p>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- --------For all icons---------- -->
+    <script src="https://kit.fontawesome.com/8ce0bceac7.js" crossorigin="anonymous"></script>
+
+    <!--------------For Apex Chart-------------->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+                
+</head>
+<body>
+<!--------------Sidebar Section-------------->
+    <section id="sidebar">
+    <ul class="sideMenu top">
+        <li>
+            <i class="fa-solid fa-bars"></i>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-grip"></i>
+                <span class="text">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="#bottomContainer">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span class="text">Report</span>
+            </a>
+        </li>
+        <li>
+            <a href="#message">
+                <i class="fa-solid fa-phone"></i>
+                <span class="text">Help & Support</span>
+            </a>
+        </li>
+    </ul>    
+    <ul class="sideMenu">
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                <span class="text">Setting</span>
+            </a>
+        </li>
+        <li>
+            <a href="/logout" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- Content -->
+<section id="content">
+
+    <!--------------Navbar Section-------------->
+    <nav>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span class="text">Social Media</span>
+         </a>
+            <form action="#">
+            <div class="form-input">
+                <input type="search" placeholder="Search...">
+                <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+         <input type="checkbox" id="switch-mode" hidden>
+         <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <span class="num">8</span>
+        </a>
+        <a href="#" class="profile">
+            <img src="/Images/user-3296.png">
+        </a>
+    </nav>
+   <!-- Navbar -->
+
+   
+    <!--------------Main Section-------------->
+<main>
+
+    <div class="mainContainer">
+
+        <div class="leftContainer">
+            <div class="card">
+                <h3 class="title">Summary</h3>
+
+                <dic class="details">
+                    <div class="detailWrapper">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        <p>Impression</p>
+                        <h3 class="detailNum">136k <span class="upDown green">+36%</span></h3>
+                    </div>
+                    <hr class="divider">
+                    <div class="detailWrapper">
+                        <i class="fa-solid fa-users"></i>
+                        <p>Followers</p>
+                        <h3 class="detailNum">1562 <span class="upDown green">+54%</span></h3>
+                    </div>
+                    <hr class="divider">
+                    <div class="detailWrapper">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <p>Engagement</p>
+                        <h3 class="detailNum">56 <span class="upDown red">-20%</span></h3>
+                    </div>
+                    <hr class="divider">
+                    <div class="detailWrapper">
+                        <i class="fa-solid fa-heart"></i>
+                        <p>Likes</p>
+                        <h3 class="detailNum">738 <span class="upDown green">+46%</span></h3>
+                    </div>
+                    <hr class="divider">
+                </dic>
+                <div id="pieChart"></div>
+            </div>
+        </div>
+
+        <div class="rightContainer">
+            <h1>Dashboard</h1>
+            <div class="card">
+                <h3 class="title">Recent Upload</h3>
+                <div class="tableWrapper">
+                    <table class="table">
+                        <tr>
+                            <th>Thumbnails & Descriptions</th>
+                            <th>Dates</th>
+                            <th>View</th>
+                            <th>Comment</th>
+                            <th>Likes</th>
+                            <th>More</th>
+                        </tr>
+                        <tr>
+                            <td class="tableTitle">
+                                <img src="/Images/content1.jpg" class="tableImage">
+                                <p>Social media dashboard</p>
+                            </td>
+                            <td>Dec 11,2023</td>
+                            <td>230k</td>
+                            <td>151</td>
+                            <td>20k</td>
+                            <td><button class="btn2">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td class="tableTitle">
+                                <img src="/Images/content2.jpg" class="tableImage">
+                                <p>Social media dashboard</p>
+                            </td>
+                            <td>Jan 05,2024</td>
+                            <td>30k</td>
+                            <td>53</td>
+                            <td>5k</td>
+                            <td><button class="btn2">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td class="tableTitle">
+                                <img src="/Images/content1.jpg" class="tableImage">
+                                <p>Social media dashboard</p>
+                            </td>
+                            <td>Mar 26,2024</td>
+                            <td>53k</td>
+                            <td>623</td>
+                            <td>35k</td>
+                            <td><button class="btn2">Details</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="cardWrapper">
+                    <div class="card">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h1 class="count">2.3k</h1>
+                        <small>Followers</small>
+                        <div class="dropdown">
+                            <button class="btn btn-more">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <div class="dropdownContent">
+                                <a href="#">Details</a>
+                                <a href="">Download</a>
+                                <a href="">Share</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-brands fa-youtube"></i>
+                        <h1 class="count">1k</h1>
+                        <small>Subscribers</small>
+                        <div class="dropdown">
+                            <button class="btn btn-more">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <div class="dropdownContent">
+                                <a href="#">Details</a>
+                                <a href="">Download</a>
+                                <a href="">Share</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <h1 class="count">1.3k</h1>
+                        <small>Followers</small>
+                        <div class="dropdown">
+                            <button class="btn btn-more">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <div class="dropdownContent">
+                                <a href="#">Details</a>
+                                <a href="">Download</a>
+                                <a href="">Share</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa-brands fa-twitter"></i>
+                        <h1 class="count">1.6k</h1>
+                        <small>Followers</small>
+                        <div class="dropdown">
+                            <button class="btn btn-more">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <div class="dropdownContent">
+                                <a href="#">Details</a>
+                                <a href="">Download</a>
+                                <a href="">Share</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bottomContainer" class="bottomContainer">
+            <h1 class="heading">Report</h1>
+            <dic class="wrapper">
+                <div class="card">
+                    <div class="titleWrapper">
+                        <div class="filter">
+                            <a href="#" class="active">Day</a>
+                            <a href="#">Week</a>
+                            <a href="#">Month</a>
+                        </div>
+                        <h3 class="title">Data Chart</h3>
+                    </div>
+                    <div class="chartContainer">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </dic>
+        </div>
+
+    </div>
+
+</main>
+
+</section>
+
+<!--------------Support Section-------------->
+<div id="message">
+    <h1 class="heading">Help & Support</h1>
+    <div class="container">
+        <div class="row">
+            <div class="cont-right">
+                <h1 class="subtitle">Contact Us</h1>
+                <h1 id="name"><i class="fa-solid fa-earth-americas"></i> socialmedia.com</h1>
+                <p><i class="fa-solid fa-envelope"></i> socialmedia@mail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0123-456-789</p>
+            </div>
+            <div class="cont-left">
+                             <!-- Receive contact details on Email -->
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="7eb1448d-3e13-4aae-9b51-4a4cf29f66df"> 
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
+
+<!-- pc-#000916
+sc-#130f40 
+fc-#ffff
+bc-#1e1f21 -->
