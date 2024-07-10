@@ -25,7 +25,9 @@ app.use(session({
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/myapp', {
-    useNewUrlParser:true, useUnifiedTopology:true
+    useNewUrlParser:true, useUnifiedTopology:true,
+    serverSelectionTimeoutMS: 50000, //Increase timeout to 50sec
+    socketTimeoutMS: 45000, // Increase sockettimeout to 45sec
 });
 
 //User Schema
